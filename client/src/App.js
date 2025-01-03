@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 
+const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT;
+
 const App = () => {
     const [number, setNumber] = useState(0);
 
     const handleGenerate = () => {
-        fetch("http://127.0.0.1:5000/hello")
+        fetch(`${API_ENDPOINT}/hello`)
             .then((response) => response.json())
             .then((data) => setNumber(data));
     }
