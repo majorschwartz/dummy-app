@@ -7,7 +7,7 @@ node_modules/
 /coverage
 
 # production
-# /build # Build folder is kept for dummy quick start
+/build
 
 # misc
 .DS_Store

@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: ghostwhite;
+    font-family: "Roboto", sans-serif;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+button {
+    background-color: lightgray;
+    font-size: 1rem;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 250px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
