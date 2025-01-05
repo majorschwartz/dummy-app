@@ -1,18 +1,39 @@
 # Dummy Application
 
-A simple full-stack application that displays random numbers. The application consists of a FastAPI backend serving a React frontend as static files.
+A full-stack application built with React and FastAPI that generates random numbers.
 
 ## Features
 
-- FastAPI backend with CORS enabled
-- React frontend served as static files
-- Random number generation endpoint
-- Single-page application (SPA) support
+- React-based frontend with a clean, responsive design
+- FastAPI backend server
+- Random number generation API endpoint
+- Cross-Origin Resource Sharing (CORS) enabled
+- Environment variable support
 
 ## Prerequisites
 
 - Python 3.12.x (recommended)
-- Node.js (for development only)
+- Node.js
+
+## Frontend Setup
+
+1. Navigate to the client directory:
+
+```bash
+cd client
+```
+
+2. Install the required Node.js packages:
+
+```bash
+npm install
+```
+
+3. Create a `.env` file in the client directory with the following content:
+
+```bash
+REACT_APP_API_ENDPOINT=http://localhost:5000
+```
 
 ## Backend Setup
 
@@ -37,7 +58,17 @@ pip install -r requirements.txt
 
 ## Running the Application
 
-The application is configured to serve the pre-built React frontend through the Python server. Simply run:
+### Frontend
+
+The frontend is a simple React application that can be run using the following command:
+
+```bash
+npm start
+```
+
+### Backend
+
+The backend is a FastAPI server that can be run using the following command:
 
 ```bash
 python app.py
@@ -45,36 +76,21 @@ python app.py
 
 The server will start on `http://localhost:5000`
 
-## Development
-
-### Backend
-The FastAPI server provides two main endpoints:
-- `/hello` - Returns a random number between 1 and 100
-- `/{full_path:path}` - Serves the React SPA for all other routes
-
-### Frontend
-The React frontend is a simple application that fetches and displays random numbers from the backend. The main application logic can be found in:
-
-```bash
-client/src/App.js
-```
-
 ## Project Structure
 
-- `/server` - Contains the FastAPI backend
-  - `app.py` - Main server file
-  - `requirements.txt` - Python dependencies
-- `/client` - Contains the React frontend
-  - `/build` - Production build (pre-built for convenience)
-  - `/public` - Static assets
-  - `/src` - Source code
-
-## Notes
-
-- The React application is pre-built and served as static files through the Python server
-- CORS is enabled for all origins in development
-- The server runs on port 5000 by default
-- For development purposes, you can run the React application separately using `npm start` in the client directory
+```
+.
+├── client
+│   ├── public
+│   ├── src
+│   ├── package.json
+│   └── .env (not included)
+├── server
+│   ├── app.py
+│   └── requirements.txt
+├── .gitignore
+└── README.md
+```
 
 ## License
 
